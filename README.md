@@ -71,7 +71,7 @@ The report is built on a clean, single-direction **Star Schema** to keep queries
 ### Modeling Standards
 
 * **Zero Implicit Measures:** All numeric fields in Fact_Sales are hidden from report view to ensure users only interact with centralized, validated DAX measures.
-* **Data Sanitization:** Handled raw data entry anomalies in Power Query (e.g., negative supplier costs that produced margins over 100%) to preserve financial accuracy.
+* **Data Cleansing:** Filtered out negative unit costs in Power Query to fix an issue where Labels showed >100% profit margin.
 * **Dynamic Row-Level Security (RLS):** Configured territory-level data filtering via an isolated security table, avoiding bidirectional relationship overhead.
 
 ---
